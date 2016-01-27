@@ -1,0 +1,82 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My Dashboard AngularJS App</title>
+
+  <!-- In production use:
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+-->
+  <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="validate/validate.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/treebuilder.js"></script>
+  <script src="components/treeview.js"></script>
+  <script src="components/components.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">-->
+  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!--<link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />-->
+
+  <script src="https://cdn.rawgit.com/jonsamwell/angular-auto-validate/master/dist/jcs-auto-validate.js"></script>
+
+
+
+</head>
+<body>
+  <!--<ul class="menu">-->
+    <!--<li><a href="#/view1">view1</a></li>-->
+    <!--<li><a href="#/view2">view2</a></li>-->
+  <!--</ul>-->
+  <tabs>
+    <pane title="Documentation">
+      <div ng-controller="treeBuildCtrl">
+        Doca there
+        <div
+                data-angular-treeview="true"
+                data-tree-id="mytree"
+                data-tree-model="roleList"
+                data-node-id="roleId"
+                data-node-label="roleName"
+                data-node-children="children" >
+        </div>
+        <!--<div ng-repeat="beerCount in beers">-->
+          <!--<ng-pluralize count="beerCount" when="beerForms"></ng-pluralize>-->
+        <!--</div>-->
+      </div>
+    </pane>
+    <pane title="Life">
+      Date: {{ '2012-04-01' | date:'fullDate' }} <br>
+      Currency: {{ 123456 | currency }} <br>
+      Number: {{ 98765.4321 | number }} <br>
+    </pane>
+    <pane title="Todo List">
+      Date: {{ '2016-01-27' | date:'fullDate' }} <br>
+      Currency: {{ 123 | currency }} <br>
+      Number: {{ 987.21 | number }} <br>
+    </pane>
+    <pane title="About">
+      <div ng-view></div>
+      <div>Angular dash app: v.<span app-version></span></div>
+    </pane>
+  </tabs>
+
+</body>
+</html>
+
+
+<!--<h1>Angular Auto Validate Default Setup with Bootstrap</h1>-->
+<!--<div class="container-fluid">-->
+  <!--<div class="row">-->
+    <!--<div class="col-sm-12" ng-view=""></div>-->
+  <!--</div>-->
+<!--</div>-->
