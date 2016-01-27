@@ -1,0 +1,2 @@
+# ngSample
+learn AngularJS
