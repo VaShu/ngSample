@@ -29,6 +29,6 @@ angular.module('validate', ['ngRoute', 'jcs-autoValidate']);
         '$routeProvider'
     ];
 
-    app.controller('demoCtrl', DemoCtrlFn);
-    app.config(RunFn);
+    .controller('demoCtrl', DemoCtrlFn);
+    .config(RunFn);
 

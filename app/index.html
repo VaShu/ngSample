@@ -15,11 +15,12 @@
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/treebuilder.js"></script>
-  <script src="components/treeview.js"></script>
+  <!--<script src="components/treeview.js"></script>-->
   <script src="components/components.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <script src="https://cdn.rawgit.com/jonsamwell/angular-auto-validate/master/dist/jcs-auto-validate.js"></script>
 
   <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">-->
   <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
@@ -27,20 +28,24 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <!--<link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />-->
 
-  <script src="https://cdn.rawgit.com/jonsamwell/angular-auto-validate/master/dist/jcs-auto-validate.js"></script>
+
 
 
 
 </head>
 <body>
-  <!--<ul class="menu">-->
-    <!--<li><a href="#/view1">view1</a></li>-->
-    <!--<li><a href="#/view2">view2</a></li>-->
-  <!--</ul>-->
+  <h1>Angular Samples</h1>
+  <div class="menu" align="right">
+    <a href="#/view1">Ru</a> /
+    <a href="#/view2">En</a>
+  </div>
   <tabs>
     <pane title="Documentation">
       <div ng-controller="treeBuildCtrl">
-        Doca there
+        <h3>AngularJS Basics Documentation</h3>
+        <div style="margin:10px 0 30px 0; padding:10px; background-color:#EEEEEE; border-                           radius:5px; font:12px Tahoma;">
+          <span><b>Selected </b> : {{mytree.currentNode.roleName}}</span>
+        </div>
         <div
                 data-angular-treeview="true"
                 data-tree-id="mytree"
@@ -74,7 +79,7 @@
 </html>
 
 
-<!--<h1>Angular Auto Validate Default Setup with Bootstrap</h1>-->
+<!---->
 <!--<div class="container-fluid">-->
   <!--<div class="row">-->
     <!--<div class="col-sm-12" ng-view=""></div>-->
