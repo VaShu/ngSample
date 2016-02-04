@@ -65,9 +65,11 @@
       Number: {{ 98765.4321 | number }} <br>
     </pane>
     <pane title="Todo List">
-      Date: {{ '2016-01-27' | date:'fullDate' }} <br>
-      Currency: {{ 123 | currency }} <br>
-      Number: {{ 987.21 | number }} <br>
+      <div ng-controller="DateCtrl">
+        Date & Time: {{ currentdate | date:"dd/MM/yyyy 'at' h:mma" }} <br>
+        Currency: {{ 123 | currency }} <br>
+        Number: {{ 987.21 | number }} <br>
+      </div>
     </pane>
     <pane title="About">
       <div ng-view></div>
